@@ -9,6 +9,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import os
+from matplotlib import ticker
 
 # (5/5 points) Initial comments with your name, class and project at the top of your .py file.
 # (5/5 points) Proper import of packages used.
@@ -32,9 +33,9 @@ for ticker in travel_stocks:
     for price in stock_history["Close"]:
         travel_close[ticker].append(price)
     numpy_close_price = np.array(travel_close[ticker])
-    plt.plot(numpy_close_price)
-    plt.ylabel('Price')
-    plt.xlabel('Date')
-    plt.title(ticker)
-    plt.savefig("charts/" + ticker + ".png")
-    plt.close()
+    fig, ax = plt.subplots()
+    ax.plot(numpy_close_price)
+    ax.set_ylabel('Price')
+    ax.set_xlabel('Date')
+    ax.yaxis.set_major_formatter('${x:1.2f}')
+    ax.get_figure().savefig("charts/" + ticker + ".png")
