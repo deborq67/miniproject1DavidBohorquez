@@ -24,18 +24,27 @@ from matplotlib import ticker
 
 travel_stocks = ["MAR","HLT","RCL","LUV","UBER"]
 travel_close = {}
-os.makedirs("charts/", exist_ok=True)
+stock_date = {}
+
+#Make the folder called "charts"
+os.makedirs(name="charts/", exist_ok=True)
 
 for ticker in travel_stocks:
     stock_info = yf.Ticker(ticker)
     stock_history = stock_info.history(period="10d")
+    stock_date[ticker] = stock_history.index
     travel_close[ticker] = []
     for price in stock_history["Close"]:
         travel_close[ticker].append(price)
     numpy_close_price = np.array(travel_close[ticker])
+
+#ax makes it easier to format ticks than traditional plt commands
     fig, ax = plt.subplots()
     ax.plot(numpy_close_price)
     ax.set_ylabel('Price')
     ax.set_xlabel('Date')
+#Put dollar signs before the y axis. Put 2 decimal places as well.
     ax.yaxis.set_major_formatter('${x:1.2f}')
     ax.get_figure().savefig("charts/" + ticker + ".png")
+print(stock_date)
+    #print(travel_close)
