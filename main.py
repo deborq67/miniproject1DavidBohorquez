@@ -4,12 +4,14 @@
 
 #Import the required modules:
 
+
 import yfinance as yf
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import os
-from matplotlib import ticker
+import matplotlib.dates as mdates
+from datetime import datetime
 
 # (5/5 points) Initial comments with your name, class and project at the top of your .py file.
 # (5/5 points) Proper import of packages used.
@@ -37,14 +39,18 @@ for ticker in travel_stocks:
     for price in stock_history["Close"]:
         travel_close[ticker].append(price)
     numpy_close_price = np.array(travel_close[ticker])
+    numpy_stock_date = np.array(stock_date[ticker])
 
 #ax makes it easier to format ticks than traditional plt commands
     fig, ax = plt.subplots()
-    ax.plot(numpy_close_price)
+    ax.plot(numpy_stock_date,numpy_close_price, 'o', color='black', markersize=3, linestyle='dotted')
     ax.set_ylabel('Price')
     ax.set_xlabel('Date')
 #Put dollar signs before the y axis. Put 2 decimal places as well.
     ax.yaxis.set_major_formatter('${x:1.2f}')
+    ax.xaxis.set_major_formatter(mdates.DateFormatter('%b %d'))
+    ax.xaxis.set_major_locator(mdates.DayLocator(interval=1))
+    ax.tick_params(axis='x', rotation=90, labelrotation=90, size=3)
+    fig.tight_layout()
     ax.get_figure().savefig("charts/" + ticker + ".png")
-print(stock_date)
     #print(travel_close)
