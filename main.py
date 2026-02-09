@@ -39,17 +39,26 @@ for ticker in travel_stocks:
     for price in stock_history["Close"]:
         travel_close[ticker].append(price)
     numpy_close_price = np.array(travel_close[ticker])
-    numpy_stock_date = np.array(stock_date[ticker])
 
-#ax makes it easier to format ticks than traditional plt commands
+    ''' This command  makes the array with date but nullifies the time in the numpy array
+        leaving only the date. Good for tick alignment.
+    '''
+    numpy_stock_date = np.array(stock_date[ticker], dtype='datetime64[D]')
+    # Using ax makes it easier to format ticks than traditional plt commands
     fig, ax = plt.subplots()
+# The 'o' adds dots along with a dotted line.
     ax.plot(numpy_stock_date,numpy_close_price, 'o', color='black', markersize=3, linestyle='dotted')
-    ax.set_ylabel('Price')
+    ax.set_ylabel('Closing Price')
     ax.set_xlabel('Date')
-#Put dollar signs before the y axis. Put 2 decimal places as well.
+# Put dollar signs before the y axis. Put 2 decimal places as well.
     ax.yaxis.set_major_formatter('${x:1.2f}')
+# Set x-axis ticks to show as abbreviated month (%b) and two-digit day(%d)
     ax.xaxis.set_major_formatter(mdates.DateFormatter('%b %d'))
+# Hide the right and top bars in the graph. Makes the graph look better.
+    ax.spines[['top', 'right']].set_visible(False)
+# Create 1 tick per day.
     ax.xaxis.set_major_locator(mdates.DayLocator(interval=1))
+# Make the tick labels vertical.
     ax.tick_params(axis='x', rotation=90, labelrotation=90, size=3)
     fig.tight_layout()
     ax.get_figure().savefig("charts/" + ticker + ".png")

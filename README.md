@@ -1,5 +1,5 @@
 # INF601 - Advanced Programming in Python
-# Jane Doe
+# David Bohorquez
 # Mini Project 1
  
  
@@ -7,24 +7,24 @@
  
 ## Description
  
-An in-depth paragraph about your project and overview of use.
- 
+This project plots a group of  
 ## Getting Started
  
 ### Dependencies
+
+All dependencies are listed in the requirements.txt document. To install them, execute this command on Python:
  
 ```
 pip install -r requirements.txt
 ```
-* ex. Windows 10
-* List pip install instructions.
  
 ### Installing
  
 * How/where to download your program
 * Any modifications needed to be made to files/folders
  
-### Executing program
+### Executing the Program
+
  
 * How to run the program
 * Step-by-step bullets
@@ -40,12 +40,8 @@ command to run if program contains helper info
 ```
  
 ## Authors
- 
-Contributors names and contact info
- 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
- 
+  
+David Bohorquez
 ## Version History
  
 * 0.2
@@ -56,12 +52,12 @@ ex. [@DomPizzie](https://twitter.com/dompizzie)
  
 ## License
  
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+This project is licensed under the GNU General Public License - see the LICENSE.md file for details
  
 ## Acknowledgments
  
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
+These following sources helped immensely in writing this script:
+* [strftime Cheat Sheet](https://strftime.org/)
 * [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
 * [dbader](https://github.com/dbader/readme-template)
 * [zenorocha](https://gist.github.com/zenorocha/4526327)
