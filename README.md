@@ -14,9 +14,15 @@ This project plots the closing stock price over the last 10 trading days of the 
 * Southwest Airlines Co (LUV)
 * Uber Technologies Inc (UBER)
 
+![HLT.png](https://i.ibb.co/39P8XhgH/HLT.png)
+
 
 ## Getting Started
  
+### Installing
+ 
+This program was made using Python 3.13.9. Given its simplicity, it should run on any computer that has at least Python 3.13 installed along with the dependencies that follow.
+
 ### Dependencies
 
 All dependencies are listed in the requirements.txt document. To install them, execute this command on Python:
@@ -24,38 +30,34 @@ All dependencies are listed in the requirements.txt document. To install them, e
 ```
 pip install -r requirements.txt
 ```
- 
-### Installing
- 
-This program was made using Python 3.13.9. Given its simplicity, u
-* Any modifications needed to be made to files/folders
- 
-### Executing the Program
 
- 
-* How to run the program
-* Step-by-step bullets
+### Executing the Program
+The program is very simple and can be executed from any directory Python has access to. 
+* Download both the `main.py` and `requirements.txt` file. It is highly recommended that you keep them both in the same directory.
+* Alternatively, you could download the ZIP and use the extracted directory.
+* Run the command listed on the **Dependencies** section if you have not done so already.
+* Depending on how your Python installation is set up, execute from the directory either of these commands:
 ```
-code blocks for commands
+python main.py
 ```
- 
+or
+```
+python3 main.py
+```
+That's it! You should see 5 graphs similar to the image above in a newly created folder called "charts" representing those travel companies.
 ## Help
  
 **Will this program overwrite any files if a 'charts' folder is already made?**
 
-Mostly not. It will only overwrite files that contain the exact name at the 
-```
-command to run if program contains helper info
-```
+Mostly not. It will only overwrite files that contain the exact name as the tickers with a PNG format. The `exist_ok=True` parameter was added to ensure no errors were present if the folder already existed.
+
+**Will this work on Python 3.14?**
  
 ## Authors
   
 David Bohorquez
 ## Version History
- 
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
+
 * 0.1
     * Initial Release
  
