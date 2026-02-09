@@ -58,18 +58,18 @@ Mostly not. It will only overwrite files that contain the exact name as the tick
 David Bohorquez
 ## Version History
 
-* 0.1
+* 1.0
     * Initial Release
  
 ## License
  
-This project is licensed under the GNU General Public License - see the LICENSE.md file for details
+This project is licensed under the GNU General Public License - see the LICENSE.md file for details.
  
 ## Acknowledgments
  
 These following sources helped immensely in writing this script:
 * [strftime Cheat Sheet](https://strftime.org/)
 * [The matplotlib.axes and matplotlib.axis sections of the documentation.](https://matplotlib.org/stable/api/)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+* [W3 Python String Formatting for inserting dollar signs.](https://www.w3schools.com/python/python_string_formatting.asp)
+* [Numpy documentation on datetime](https://numpy.org/doc/stable/reference/arrays.datetime.html)
+* [os.makedirs() Tutorial](https://www.w3schools.com/python/ref_os_makedirs.asp)
