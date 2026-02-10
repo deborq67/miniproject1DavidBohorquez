@@ -1,10 +1,10 @@
-# INF601 - Advanced Programming in Python
-# David Bohorquez
-# Mini Project 1
+### INF601 - Advanced Programming in Python
+### David Bohorquez
+### Mini Project 1
  
+# Project Title
  
- 
- 
+Mini Project 1: Closing Stock Prices 
 ## Description
  
 This project plots the closing stock price over the last 10 trading days of the following companies associated with travel:
