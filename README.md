@@ -52,6 +52,8 @@ That's it! You should see 5 graphs similar to the image above in a newly created
 Mostly not. It will only overwrite files that contain the exact name as the tickers with a PNG format. The `exist_ok=True` parameter was added to ensure no errors were present if the folder already existed.
 
 **Will this work on Python 3.14?**
+
+Yes, this has been tested and works on Python 3.14.
  
 ## Authors
   
@@ -67,7 +69,7 @@ This project is licensed under the GNU General Public License - see the LICENSE.
  
 ## Acknowledgments
  
-These following sources helped immensely in writing this script:
+The following sources helped immensely in writing this script:
 * [strftime Cheat Sheet](https://strftime.org/)
 * [The matplotlib.axes and matplotlib.axis sections of the documentation.](https://matplotlib.org/stable/api/)
 * [W3 Python String Formatting for inserting dollar signs.](https://www.w3schools.com/python/python_string_formatting.asp)
