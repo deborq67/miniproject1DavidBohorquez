@@ -70,6 +70,7 @@ This project is licensed under the GNU General Public License - see the LICENSE.
 ## Acknowledgments
  
 The following sources helped immensely in writing this script:
+* [yfinance documentation](https://ranaroussi.github.io/yfinance/reference/index.html)
 * [strftime Cheat Sheet](https://strftime.org/)
 * [The matplotlib.axes and matplotlib.axis sections of the documentation.](https://matplotlib.org/stable/api/)
 * [W3 Python String Formatting for inserting dollar signs.](https://www.w3schools.com/python/python_string_formatting.asp)
